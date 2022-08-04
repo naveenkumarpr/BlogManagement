@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h2></h2>
+<div class="text-right">
+  <div class="c">Categories List</div>
+<%= link_to 'Create New Category', new_category_path, class:"btn btn-secondary "%>
+</div>
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th class="thead-dark">SL no</th>
+      <th class="thead-dark">Category Name</th>
+       <th class="thead-dark">Actions</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @categories.each_with_index do |category,index| %>
+       <td><h2><%= index+1 %><h2> </td>
+        <td><h2><%= category.name %></h2></td>
+        <td><h3><%= link_to 'Show', category,class:"btn btn-primary"%><%= link_to 'Edit', edit_category_path(category), class:"btn btn-info" %></h3></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

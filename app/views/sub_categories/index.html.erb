@@ -1,0 +1,33 @@
+
+<p id="notice"><%= notice %></p>
+
+<h2></h2>
+<div class="text-right">
+  <div class="c">SubCategories List</div>
+<%= link_to 'Create New SubCategory', new_sub_category_path, class:"btn btn-secondary "%>
+</div>
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th class="thead-dark">SL no</th>
+      <th class="thead-dark">SubCategory Name</th>
+       <th class="thead-dark">Actions</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @sub_categories.each_with_index do |sub_category,index| %>
+       <td><h2><%= index+1 %><h2> </td>
+        <td><h2><%= sub_category.name %></h2></td>
+        <td><h3><%= link_to 'Show', sub_category,class:"btn btn-primary"%><%= link_to 'Edit', edit_sub_category_path(sub_category), class:"btn btn-info" %></h3></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

@@ -1,0 +1,31 @@
+
+<div class="container ">
+ <% @posts.each do |post| %>
+ <div class="row justify-content-md-center">
+  <div class="col mt-4">
+    <div class="card" style="width: 50rem;">
+    <div class="card shadow  bg-info rounded ">
+     <div class="card text-center style="width: 500px;">
+      <div class="card-header font-italic">
+
+        <div class="card-body  ">
+          <h5 class="card-title text-primary"><%= post.title %></h5>
+          <p class="card-text"><%= post.body.first(50)%></p>
+          <%= link_to 'Show', post,class:"btn btn-outline-info"%>
+          <%if logged_in?&& post.user == @current_user %>
+          <%= link_to 'Edit', edit_post_path(article),class:"btn btn-outline-info" %>
+          <%= link_to 'Delete', post, class:"btn btn-outline-danger",method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+
+        </div>
+        <div class="card-footer text-muted">
+          <small>Created by_<%=post.user.name%>_on <%= time_ago_in_words(post.created_at) %> ago, 
+            edited <%= time_ago_in_words(post.updated_at) %> ago</small>
+
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <% end %>
+  </div>

@@ -1,0 +1,38 @@
+<div class = "row justify-content-center">
+  <div class="col-3">
+
+    <%= form_with(model: post) do |form| %>
+      <% if post.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+          <ul>
+            <% post.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      
+      <div>
+        <%= form.label :title, "Title" %><br>
+        <%= form.text_field :title ,placeholder:"enter title" %><br>
+        <%= form.label :body, "body" %><br>
+        <%= form.text_area :body ,placeholder:"enter title" %><br>
+        <%= form.label :user_id, "User Id" %><br>
+        <%= form.number_field :user_id ,placeholder:"enter user_id" %>
+        <%= form.label :image, "Image Address" %><br>
+        <%= form.text_field :image ,placeholder:"enter image address" %><br>
+        <br>
+
+
+        <%= form.label :sub_category %>
+        <%= form.collection_select :sub_category_id, SubCategory.all,:id,:name%>     
+      </div>
+
+      <div class="actions">
+        <%= form.submit class:"btn btn-success"%>
+      </div>
+    <% end %>
+  </div>
+</div>

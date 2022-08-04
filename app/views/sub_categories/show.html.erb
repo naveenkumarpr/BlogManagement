@@ -1,0 +1,5 @@
+<p id="notice"><%= notice %></p>
+<%= @sub_category.name %>
+<%= link_to "Delete", @sub_category, method: :delete, data: { confirm: "Really?" }%>
+<%= link_to 'Edit', edit_sub_category_path(@sub_category) %> |
+<%= link_to 'Back', sub_categories_path %>

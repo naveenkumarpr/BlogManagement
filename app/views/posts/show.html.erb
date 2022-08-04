@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<%= image_tag @post.image, height: 500,width: 1300 %>
+<h1><%= @post.title %></h1><br>
+<%= @post.body %>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %><br>
+
+
+
+<div class="card">
+	<div class="card-body">
+		<div class="container">
+			<h2>Comments</h2>
+			<%= render @post.comments %>
+			<h2>Add a comment:</h2>
+			<%= render 'comments/form' %>
+		</div>
+
+	</div>
+</div>

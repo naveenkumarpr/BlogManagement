@@ -1,0 +1,37 @@
+.container {
+  position: relative;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("home.jpg");
+
+  /* Full height */
+  height: 90%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  text-shadow: 4px 4px 4px #000000;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+  font-size: 30px; 
+
+}
+p{
+  font-weight:200 ;
+  font-size: 20px; 
+}
