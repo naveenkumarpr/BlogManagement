@@ -1,4 +1,4 @@
-** "Blog Management"** 
+**Blog Management** 
 In this application
 
 A user will be able to create a post with a cover photo/image and tagging it with different subcategories.
