@@ -1,24 +1,18 @@
-# README
+** "Blog Management"** 
+In this application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A user will be able to create a post with a cover photo/image and tagging it with different subcategories.
 
-Things you may want to cover:
+A user will be able to comment on a post.
 
-* Ruby version
+A user will be able to add a reply to a comment.
 
-* System dependencies
 
-* Configuration
+**Front End:**
+HTML, CSS and Javascript.
+Bootstrap framework for UI developmen
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**Tools & Tech Stack:**
+Ruby, rails, and MySql.
+HTML, CSS, Javascript and bootstrap.
+Github for version control
